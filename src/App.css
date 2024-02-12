@@ -36,3 +36,72 @@
     transform: rotate(360deg);
   }
 }
+
+/* Custom CSS */
+
+/* Main Page */
+.main-page
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.menu
+{
+  display: flex;
+  justify-content: center;
+}
+
+/* Music Page */
+.music-page
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.music-content
+{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+
+
+/* Initial design with centered menu */
+.design-menu-centered {
+  display: flex;
+  justify-content: center;
+}
+
+/* Split-screen layout for side-by-side menu and content */
+.split-screen {
+  display: flex;
+  height: 100vh;
+}
+
+.split-screen .design-menu {
+  flex: 1 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  max-width: 30%;
+}
+.split-screen .design-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-grid{
+  column-gap: 5px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  break-inside: avoid;
+}
