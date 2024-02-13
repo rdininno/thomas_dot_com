@@ -5,8 +5,7 @@ export default function ImageGrid({ images }) {
 
   const getColumnCount = () => {
     if (images.length <= 4) return 2;
-    if (images.length <= 6) return 3;
-    return 4; // Default to 4 columns for more than 6 images
+    return 3;
   };
 
   const gridStyle = {
