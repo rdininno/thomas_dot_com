@@ -4,21 +4,14 @@ import DesignBlock from "./DesignBlock.js";
 import imageData from "../data/imageData.js";
 import ImageGrid from "./ImageGrid.js";
 
-export default function Design() {
-  const [activeContent, setActiveContent] = useState("");
-
-  const containerClass = activeContent
-    ? "split-screen"
-    : "design-menu-centered";
-  const menuClass = activeContent ? "design-menu" : "";
-
+export default function Design({ activeContent, setActiveContent }) {
   const handleSetActiveContent = (contentName) => {
     setActiveContent(contentName);
   };
 
   return (
-    <div class={containerClass}>
-      <div class={menuClass}>
+    <div className="design-page">
+      <div className="design-menu">
         <DesignBlock
           name="Freak Heat Waves - Mondo Tempo"
           backgroundImage="./images/mondo_tempo/IMG_0225.jpeg"

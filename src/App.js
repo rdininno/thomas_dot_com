@@ -8,6 +8,13 @@ import Design from "./components/Design.js";
 
 function App() {
   const [activeComponent, setActiveComponent] = useState("");
+  const [activeDesignContent, setActiveDesignContent] = useState("");
+
+  // Reset activeDesignContent when the Design menu item is clicked
+  const handleDesignClick = () => {
+    setActiveComponent("Design");
+    setActiveDesignContent(""); // Reset the active content for Design
+  };
 
   const imageStyle = {
     maxWidth: "100%",
@@ -19,11 +26,7 @@ function App() {
       <Header />
       <div className="main-page">
         <div className="menu">
-          <MenuItem
-            name="Design"
-            color="yellow"
-            onClick={() => setActiveComponent("Design")}
-          />
+          <MenuItem name="Design" color="yellow" onClick={handleDesignClick} />
           <MenuItem
             name="Music"
             color="red"
@@ -38,7 +41,12 @@ function App() {
 
         <div className="main-content">
           {activeComponent === "About" && <About />}
-          {activeComponent === "Design" && <Design />}
+          {activeComponent === "Design" && (
+            <Design
+              setActiveContent={setActiveDesignContent}
+              activeContent={activeDesignContent}
+            />
+          )}{" "}
           {activeComponent === "Music" && <Music />}
           {activeComponent === "" && (
             <div>
