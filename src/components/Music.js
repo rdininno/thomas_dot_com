@@ -3,6 +3,7 @@ export default function Music() {
     border: "0",
     width: "350px",
     height: "470px",
+    "margin-bottom": "10px",
   };
 
   return (
