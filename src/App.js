@@ -36,7 +36,7 @@ function App() {
           />
         </div>
 
-        <div className="content">
+        <div className="main-content">
           {activeComponent === "About" && <About />}
           {activeComponent === "Design" && <Design />}
           {activeComponent === "Music" && <Music />}

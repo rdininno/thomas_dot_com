@@ -66,9 +66,6 @@
   margin-top: 20px;
 }
 
-
-
-
 /* Initial design with centered menu */
 .design-menu-centered {
   display: flex;
@@ -82,11 +79,11 @@
 }
 
 .split-screen .design-menu {
-  flex: 1 1;
   padding: 20px;
   display: flex;
   justify-content: center;
   max-width: 30%;
+  flex-direction: column;
 }
 .split-screen .design-content {
   flex: 1;
