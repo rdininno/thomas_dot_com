@@ -4,6 +4,7 @@ export default function ImageGrid({ images }) {
   }
 
   const getColumnCount = () => {
+    if (images.length <= 2) return 1;
     if (images.length <= 4) return 2;
     return 3;
   };
