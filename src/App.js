@@ -10,10 +10,9 @@ function App() {
   const [activeComponent, setActiveComponent] = useState("");
   const [activeDesignContent, setActiveDesignContent] = useState("");
 
-  // Reset activeDesignContent when the Design menu item is clicked
   const handleDesignClick = () => {
     setActiveComponent("Design");
-    setActiveDesignContent(""); // Reset the active content for Design
+    setActiveDesignContent("");
   };
 
   const imageStyle = {
