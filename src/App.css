@@ -70,6 +70,7 @@
 .design-menu-centered {
   display: flex;
   justify-content: center;
+  
 }
 
 /* Split-screen layout for side-by-side menu and content */
@@ -101,4 +102,10 @@
   max-width: 100%;
   margin-bottom: 5px;
   break-inside: avoid;
+}
+
+.design-menu-centered div
+{
+  flex-direction: row;
+  display: flex;
 }
