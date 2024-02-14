@@ -12,7 +12,11 @@ export default function DesignBlock({
   };
 
   return (
-    <button className="button-style" style={buttonStyle} onClick={onClick}>
+    <button
+      className="button-style righteous-regular"
+      style={buttonStyle}
+      onClick={onClick}
+    >
       {name}
     </button>
   );
