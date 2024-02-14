@@ -14,6 +14,10 @@ function App() {
     setActiveDesignContent("");
   };
 
+  const resetComponentClick = () => {
+    setActiveComponent("");
+  };
+
   const imageStyle = {
     maxWidth: "100%",
     maxHeight: "auto",
@@ -23,7 +27,7 @@ function App() {
     <div className="App">
       <div className="main-page">
         <header>
-          <div className="header-left">
+          <div className="header-left" onClick={resetComponentClick}>
             <div className="logo">
               <img src="./images/thomas-logo.png" alt="Thomas Logo"></img>
             </div>
