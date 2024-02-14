@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState } from "react";
-import Header from "./components/Header.js";
 import MenuItem from "./components/MenuItem.js";
 import About from "./components/About.js";
 import Music from "./components/Music.js";
@@ -22,21 +21,32 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
       <div className="main-page">
-        <div className="menu">
-          <MenuItem name="Design" color="yellow" onClick={handleDesignClick} />
-          <MenuItem
-            name="Music"
-            color="red"
-            onClick={() => setActiveComponent("Music")}
-          />
-          <MenuItem
-            name="About"
-            color="blue"
-            onClick={() => setActiveComponent("About")}
-          />
-        </div>
+        <header>
+          <div className="header-left">
+            <div className="logo">
+              <img src="./images/thomas-logo.png" alt="Thomas Logo"></img>
+            </div>
+            <div className="title monoton-regular">Thomas Dot Com</div>
+          </div>
+          <div className="menu">
+            <MenuItem
+              name="Design"
+              color="yellow"
+              onClick={handleDesignClick}
+            />
+            <MenuItem
+              name="Music"
+              color="red"
+              onClick={() => setActiveComponent("Music")}
+            />
+            <MenuItem
+              name="About"
+              color="blue"
+              onClick={() => setActiveComponent("About")}
+            />
+          </div>
+        </header>
 
         <div className="main-content">
           {activeComponent === "About" && <About />}
