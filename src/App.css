@@ -121,7 +121,25 @@
   .design-menu {
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu-item-button.righteous-regular {
+  width: 100%;
+  height: 50px;
+}
+
 }
 
 .menu-item-button {
