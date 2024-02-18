@@ -2,7 +2,6 @@ import "./App.css";
 import { useState } from "react";
 import MenuItem from "./components/MenuItem.js";
 import About from "./components/About.js";
-import Music from "./components/Music.js";
 import Design from "./components/Design.js";
 
 function App() {
@@ -40,11 +39,6 @@ function App() {
               onClick={handleDesignClick}
             />
             <MenuItem
-              name="Music"
-              color="red"
-              onClick={() => setActiveComponent("Music")}
-            />
-            <MenuItem
               name="About"
               color="blue"
               onClick={() => setActiveComponent("About")}
@@ -60,7 +54,6 @@ function App() {
               activeContent={activeDesignContent}
             />
           )}{" "}
-          {activeComponent === "Music" && <Music />}
           {activeComponent === "" && (
             <div>
               <img
