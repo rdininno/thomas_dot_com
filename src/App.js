@@ -13,38 +13,20 @@ function App() {
     setActiveDesignContent("");
   };
 
-  const resetComponentClick = () => {
-    setActiveComponent("");
-  };
-
-  const imageStyle = {
-    maxWidth: "100%",
-    maxHeight: "auto",
-  };
-
   return (
     <div className="App">
+      <div className="header">
+        <img src="./images/Freak_Heat_Waves.jpg" alt="header" />
+      </div>
       <div className="main-page">
-        <header>
-          <div className="header-left" onClick={resetComponentClick}>
-            <div className="logo">
-              <img src="./images/thomas-logo.png" alt="Thomas Logo"></img>
-            </div>
-            <div className="title monoton-regular">Thomas Dot Com</div>
-          </div>
-          <div className="menu">
-            <MenuItem
-              name="Design"
-              color="yellow"
-              onClick={handleDesignClick}
-            />
-            <MenuItem
-              name="About"
-              color="blue"
-              onClick={() => setActiveComponent("About")}
-            />
-          </div>
-        </header>
+        <div className="menu">
+          <MenuItem name="Design" color="yellow" onClick={handleDesignClick} />
+          <MenuItem
+            name="About"
+            color="blue"
+            onClick={() => setActiveComponent("About")}
+          />
+        </div>
 
         <div className="main-content">
           {activeComponent === "About" && <About />}
@@ -54,15 +36,6 @@ function App() {
               activeContent={activeDesignContent}
             />
           )}{" "}
-          {activeComponent === "" && (
-            <div>
-              <img
-                src="./images/Freak_Heat_Waves.jpg"
-                alt="Freak Heat Waves"
-                style={imageStyle}
-              />
-            </div>
-          )}
         </div>
       </div>
     </div>
