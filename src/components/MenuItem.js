@@ -4,11 +4,7 @@ export default function MenuItem({ name, onClick, color }) {
   };
 
   return (
-    <button
-      className="menu-item-button righteous-regular"
-      style={buttonStyle}
-      onClick={onClick}
-    >
+    <button className="menu-item-button" style={buttonStyle} onClick={onClick}>
       {name}
     </button>
   );

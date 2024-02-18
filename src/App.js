@@ -18,9 +18,10 @@ function App() {
       <div className="header">
         <img src="./images/Freak_Heat_Waves.jpg" alt="header" />
       </div>
+
       <div className="main-page">
         <div className="menu">
-          <MenuItem name="Design" color="yellow" onClick={handleDesignClick} />
+          <MenuItem name="Design" color="#2ebe36" onClick={handleDesignClick} />
           <MenuItem
             name="About"
             color="blue"
