@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import MenuItem from "./components/MenuItem.js";
+import Menu from "./components/Menu.js";
 import About from "./components/About.js";
 import Design from "./components/Design.js";
 
@@ -40,11 +40,6 @@ function App() {
     }
   }, [opacity]);
 
-  const handleDesignClick = () => {
-    setActiveComponent("Design");
-    setActiveDesignContent("");
-  };
-
   return (
     <div className="App">
       <div
@@ -58,14 +53,9 @@ function App() {
       </div>
 
       <div className="main-page-content">
-        <div className="menu">
-          <MenuItem name="Design" color="#2ebe36" onClick={handleDesignClick} />
-          <MenuItem
-            name="About"
-            color="blue"
-            onClick={() => setActiveComponent("About")}
-          />
-        </div>
+        {activeComponent === "" && (
+          <Menu setActiveComponent={setActiveComponent} />
+        )}
 
         <div className="main-content">
           {activeComponent === "About" && <About />}
@@ -74,6 +64,9 @@ function App() {
               setActiveContent={setActiveDesignContent}
               activeContent={activeDesignContent}
             />
+          )}
+          {activeComponent && (
+            <button onClick={() => setActiveComponent("")}>Back to Menu</button>
           )}
         </div>
       </div>
