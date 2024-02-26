@@ -25,6 +25,19 @@
   object-fit: cover;
 }
 
+.menu-button{
+  display: flex;
+  width: 100%;
+  height: auto;
+  background: none;
+  border: none;
+  justify-content: center;
+}
+
+.menu-button img {
+    height: 150px;
+}
+
 .main-page
 {
   display: flex;

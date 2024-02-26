@@ -58,15 +58,20 @@ function App() {
         )}
 
         <div className="main-content">
+          {activeComponent && (
+            <button
+              className="menu-button"
+              onClick={() => setActiveComponent("")}
+            >
+              <img src="./images/Di_Ninno_LOGO.PNG" alt="menu-button" />
+            </button>
+          )}
           {activeComponent === "About" && <About />}
           {activeComponent === "Design" && (
             <Design
               setActiveContent={setActiveDesignContent}
               activeContent={activeDesignContent}
             />
-          )}
-          {activeComponent && (
-            <button onClick={() => setActiveComponent("")}>Back to Menu</button>
           )}
         </div>
       </div>
