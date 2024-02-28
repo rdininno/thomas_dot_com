@@ -4,12 +4,14 @@ import Menu from "./components/Menu.js";
 import About from "./components/About.js";
 import Design from "./components/Design.js";
 
+import backgroundImage from "./components/assets/images/White1.jpg";
+
 function App() {
   const [activeComponent, setActiveComponent] = useState("");
   const [activeDesignContent, setActiveDesignContent] = useState("");
   const [opacity, setOpacity] = useState(1);
   const [, setFakeScrollY] = useState(0);
-  const maxScroll = 300;
+  const maxScroll = 400;
 
   useEffect(() => {
     const handleWheel = (e) => {
@@ -41,12 +43,13 @@ function App() {
   }, [opacity]);
 
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div
         className="header main-page-image"
         style={{
           opacity,
           pointerEvents: opacity === 0 ? "none" : "auto",
+          backgroundImage: `url(${backgroundImage})`,
         }}
       >
         <img src="./images/Di_Ninno_LOGO.PNG" alt="header" />

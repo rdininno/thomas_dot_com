@@ -1,6 +1,6 @@
-export default function MenuItem({ name, onClick, color }) {
+export default function MenuItem({ name, onClick, color1, color2 }) {
   const buttonStyle = {
-    backgroundColor: color,
+    backgroundImage: `linear-gradient(to right, ${color1} 50%, ${color2} 50%)`,
   };
 
   return (

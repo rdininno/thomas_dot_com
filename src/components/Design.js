@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import DesignBlock from "./DesignBlock.js";
 import imageData from "../data/imageData.js";
 import ImageGrid from "./ImageGrid.js";

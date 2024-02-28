@@ -5,12 +5,14 @@ export default function Menu({ setActiveComponent }) {
     <div className="menu">
       <MenuItem
         name="Design"
-        color="#2ebe36"
+        color1="#009246"
+        color2="#FFFFFF"
         onClick={() => setActiveComponent("Design")}
       />
       <MenuItem
         name="About"
-        color="blue"
+        color1="#FFFFFF"
+        color2="#D52B1E"
         onClick={() => setActiveComponent("About")}
       />
     </div>
